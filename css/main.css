@@ -123,22 +123,22 @@ a:hover {
 
 h1 {
 	font-family: "DM Serif Display", serif;
-	font-size: 3rem;
+	font-size: 2.5em;
 	font-weight: 500;
-	margin: 0 0 1em 0;
+	margin: 0 0 0.75em 0;
 }
 
 h2 {
 	font-family: "DM Serif Display", serif;
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 500;
-	margin: 0 0 1em 0;
+	margin: 0 0 0.75em 0;
 }
 
 h3,
 h4 {
 	font-family: "DM Serif Display", serif;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	font-weight: 500;
 }
 
@@ -168,7 +168,7 @@ button {
 	font-size: 1rem;
 	letter-spacing: 0.1em;
 	margin: 0 auto;
-	margin-top: 70px;
+	margin-top: 5em;
 	padding: 15px 30px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -191,12 +191,6 @@ button::before {
 	z-index: 1;
 	opacity: 0;
 	transition: all 0.3s;
-	/*border-top-width: 1px;
-	border-bottom-width: 1px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-color: rgba(255, 255, 255, 0.5);
-	border-bottom-color: rgba(255, 255, 255, 0.5);*/
 	transform: scale(0.1, 1);
 }
 button:hover span {
@@ -222,7 +216,7 @@ button:hover::after {
 	transform: scale(0.1, 1);
 }
 
-/*-------- Header & Footer Styles --------*/
+/*-------- Header tyles --------*/
 
 header {
 	display: flex;
@@ -232,13 +226,7 @@ header {
 	background-color: #fff;
 }
 
-.logo img {
-	width: 50%;
-	margin-left: 2em;
-	padding: 1em 0 1em 0;
-}
-
-/* -------- nav bar -------- */
+/* Nav Bar */
 nav ul {
 	display: flex;
 	justify-content: space-around;
@@ -285,6 +273,87 @@ nav.nav-items ul li a:after {
 
 nav.nav-items ul li a:hover:after {
 	width: 100%;
+}
+
+.hero-heading {
+	padding: 0 1em;
+}
+
+/* -------- footer section -------- */
+#section-footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: minmax(600px, min-content);
+}
+
+.footer-img {
+	background-image: url("../img/intro.jpeg");
+	background-size: cover;
+	background-position: center;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.footer-contact {
+	display: flex;
+	flex-direction: column;
+	padding: 6em 4em 5em 4em;
+	background-color: #faf5ed;
+}
+
+.footer-contact p {
+	padding-bottom: 2em;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	margin-bottom: 1em;
+}
+
+input,
+textarea {
+	padding: 1em;
+}
+
+.logo img {
+	width: 50%;
+	margin-left: 2em;
+	padding: 1em 0 1em 0;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	padding-top: 5em;
+}
+
+.social-icons a i {
+	font-family: "Font Awesome 5 Brands";
+	font-style: normal;
+	color: #c68d3b;
+	font-size: 2.5em;
+}
+
+.social-icons p {
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	padding-bottom: 0;
+}
+
+.copyright {
+	padding: 1.5em 0;
+	text-align: center;
 }
 
 /* ==========================================================================
@@ -355,19 +424,25 @@ nav.nav-items ul li a:hover:after {
 	grid-template-rows: min-content;
 }
 
-.item-2,
+.item-2 {
+	display: grid;
+	align-content: center;
+	background-color: #faf5ed;
+	padding: 6em 4em 6em 4em;
+}
+
 .item-3 {
 	display: grid;
 	align-content: center;
 	background-color: #faf5ed;
-	padding: 7em 4em 7em 4em;
+	padding: 6em 4em 6em 4em;
 }
 
 .item-4 {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-	padding: 5em 1em;
+	padding: 4em 1em;
 }
 
 .service-icons {
@@ -380,7 +455,6 @@ nav.nav-items ul li a:hover:after {
 	display: flex;
 	flex-basis: 50%;
 	flex-direction: column;
-	justify-content: center;
 	text-align: center;
 	margin: 2em 0;
 	text-transform: uppercase;
@@ -401,7 +475,7 @@ nav.nav-items ul li a:hover:after {
 /* -------- stats insert -------- */
 .stats {
 	height: min-content;
-	padding: 8em 3em;
+	padding: 7em 3em;
 	background-color: #f0e2d6;
 	text-align: center;
 }
@@ -419,7 +493,7 @@ nav.nav-items ul li a:hover:after {
 #section-portfolio {
 	display: grid;
 	grid-template-columns: 1fr;
-	padding: 3em 0;
+	padding: 8em 2em;
 }
 
 .portfolio-header {
@@ -432,7 +506,7 @@ nav.nav-items ul li a:hover:after {
 	display: grid;
 	align-items: center;
 	justify-items: center;
-	padding: 3em 0 3em;
+	padding: 3em 0 0.5em 0;
 }
 
 .project-example a {
@@ -442,12 +516,17 @@ nav.nav-items ul li a:hover:after {
 }
 
 .project-example a img {
-	width: 80%;
+	width: 90%;
 	padding-bottom: 1em;
 }
 
+/* portfolio image overlay */
+
 /* -------- contact section -------- */
-#section-contact {
+#section-footer {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: minmax(600px, min-content);
 }
 
 /* ==========================================================================
@@ -457,6 +536,19 @@ nav.nav-items ul li a:hover:after {
 @media only screen and (min-width: 768px) {
 	.nav-items ul {
 		flex-direction: row;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	h3,
+	h4 {
+		font-size: 1.8em;
 	}
 
 	#section-intro {
@@ -495,6 +587,12 @@ nav.nav-items ul li a:hover:after {
 	.project-example img {
 		width: 80%;
 		padding-bottom: 1em;
+	}
+
+	#section-footer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: minmax(600px, min-content);
 	}
 }
 
